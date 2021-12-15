@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<b style="font-size:25px;" class="all-time-shadow">
+<span class="theme-orange pr-2 pl-2"  style="background: #c70013;color:#fff;padding:5px;">N</span>
+<span id="netaji"></span> 
+<span class="theme-orange pr-2 pl-2"  style="background: #c70013;color:#fff;padding:5px;">S</span>
+<span id="subhas"></span> 
+<span class="theme-orange pr-2 pl-2"  style="background: #c70013;color:#fff;padding:5px;">U</span>
+<span id="university"></span>
+</b>
+
+
+<script>
+ $(document).ready(function() {
+        setTimeout(function() {
+            setTimeout(function() {
+                var netaji = "etaji";
+                var netaji_str = netaji.split("");
+                var el_netaji = document.getElementById('netaji');
+                (function animate() {
+                    netaji_str.length > 0 ? el_netaji.innerHTML += netaji_str.shift() : clearTimeout(running); 
+                    var running = setTimeout(animate, 500);
+                })();
+            }, 1000);
+            setTimeout(function() {
+                var subhas = "ubhas";
+                var subhas_str = subhas.split("");
+                var el_subhas = document.getElementById('subhas');
+                (function animate() {
+                    subhas_str.length > 0 ? el_subhas.innerHTML += subhas_str.shift() : clearTimeout(running); 
+                    var running = setTimeout(animate, 500);
+                })();
+            }, 3500);
+            setTimeout(function() {
+                var university = "niversity";
+                var university_str = university.split("");
+                var el_university = document.getElementById('university');
+                (function animate() {
+                    university_str.length > 0 ? el_university.innerHTML += university_str.shift() : clearTimeout(running); 
+                    var running = setTimeout(animate, 500);
+                })();
+            }, 6000);
+        }, 3000);
+    });</script>
+
+
+</body>
+</html>
